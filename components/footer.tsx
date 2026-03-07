@@ -28,7 +28,7 @@ export default function Footer() {
             <h1 className="text-2xl lg:text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-2">
               Aman <span className="text-blue-500 dark:text-blue-400">Verma</span>
             </h1>
-            <h2 className="text-slate-600 dark:text-slate-300">Full Stack Developer</h2>
+            <h2 className="text-slate-600 dark:text-slate-300">AI/ML Engineer & Full Stack Developer</h2>
           </div>
 
           <div className="flex justify-center lg:justify-center space-x-5">

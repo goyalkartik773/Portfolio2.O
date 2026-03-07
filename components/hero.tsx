@@ -79,10 +79,10 @@ export default function Hero() {
               >
                 <Typewriter
                   words={[
+                    "AI/ML Engineer 🤖",
+                    "Competitive Programmer ⚔️",
                     "Full Stack Developer 💻",
-                    "AI/ML Enthusiast 🤖",
                     "Flutter Developer 📱",
-                    "Competitive Programmer ⚔️ ",
                   ]}
                   loop={0}
                   cursor
@@ -99,7 +99,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 1.2 }}
                 className="max-w-lg mx-auto lg:mx-0 text-lg leading-relaxed text-slate-600 dark:text-slate-400"
               >
-                I build high-performance web and mobile apps that combine elegant design, seamless UX, and real-world scalability—driven by code and creativity.
+                I build intelligent AI/ML systems and high-performance web applications — blending deep learning, elegant design, and real-world scalability.
               </motion.p>
             </div>
 

@@ -62,11 +62,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed w-full top-0 left-0 z-40 transition-all duration-300 ${
-        isBlurred
-          ? "bg-white dark:bg-slate-800 shadow-lg"
+      className={`fixed w-full top-0 left-0 z-40 transition-all duration-300 ${isBlurred
+          ? "bg-white/80 dark:bg-slate-800/80 backdrop-blur-xl shadow-lg border-b border-slate-200/50 dark:border-slate-700/50"
           : "bg-white dark:bg-slate-800"
-      }`}
+        }`}
     >
       <nav className="container mx-auto px-6 h-16 flex justify-between items-center">
         <a href="#home" className="text-slate-900 dark:text-slate-100 font-medium text-lg">
@@ -79,11 +78,10 @@ export default function Navbar() {
             <button
               key={item.href}
               onClick={() => handleNavClick(item.href)}
-              className={`font-medium transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400 ${
-                activeSection === item.href.slice(1)
+              className={`font-medium transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400 ${activeSection === item.href.slice(1)
                   ? "text-blue-500 dark:text-blue-400"
                   : "text-slate-900 dark:text-slate-100"
-              }`}
+                }`}
             >
               {item.label}
             </button>
@@ -133,11 +131,10 @@ export default function Navbar() {
                     <button
                       key={item.href}
                       onClick={() => handleNavClick(item.href)}
-                      className={`text-left font-medium text-lg transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400 py-2 px-4 rounded-lg hover:bg-slate-50/50 dark:hover:bg-slate-800/50 ${
-                        activeSection === item.href.slice(1)
+                      className={`text-left font-medium text-lg transition-colors duration-300 hover:text-blue-500 dark:hover:text-blue-400 py-2 px-4 rounded-lg hover:bg-slate-50/50 dark:hover:bg-slate-800/50 ${activeSection === item.href.slice(1)
                           ? "text-blue-500 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20"
                           : "text-slate-900 dark:text-slate-100"
-                      }`}
+                        }`}
                     >
                       {item.label}
                     </button>
