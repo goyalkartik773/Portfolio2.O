@@ -10,6 +10,17 @@ const projectCategories = ["All", "AI/ML", "Web", "App"];
 
 const projects = [
   {
+    image: "/images/tt.png",
+    category: ["App"],
+    title: "StudySync - TimeTable App",
+    description:
+      "A visually appealing Flutter timetable and calendar app that helps students efficiently track their class schedules and college events.",
+    tags: ["Flutter", "MongoDB", "Express", "Cors"],
+    githubUrl: "https://github.com/AmanVerma1067/StudySync",
+    apkUrl:
+      "https://github.com/AmanVerma1067/StudySync/releases/tag/v3.0.0",
+  },
+  {
     image: "/images/chess.png",
     category: ["AI/ML", "Web"],
     title: "Chessify AI",
@@ -28,52 +39,6 @@ const projects = [
     previewUrl: "https://www.youtube.com/watch?v=kzqac5qWbYQ",
   },
   {
-    image: "/placeholder.svg",
-    category: ["AI/ML"],
-    title: "NeuroMath",
-    description:
-      "AI-powered handwritten math solver using a PyTorch CNN that recognizes digits and operators drawn on a digital canvas, achieving 98.6% validation accuracy.",
-    tags: ["PyTorch", "Flask", "OpenCV", "Deep Learning", "Canvas API"],
-    githubUrl: "https://github.com/AmanVerma1067/NeuroMath",
-  },
-  {
-    image: "/placeholder.svg",
-    category: ["AI/ML"],
-    title: "DriveSure",
-    description:
-      "Pay-As-You-Drive insurance risk scoring system that evaluates real-time telematics data to predict crash/claim risk and generate a 0–100 safety score via REST API.",
-    tags: ["Python", "Machine Learning", "REST API", "Telematics", "Risk Modeling"],
-    githubUrl: "https://github.com/AmanVerma1067/DriveSureModel",
-  },
-  {
-    image: "/placeholder.svg",
-    category: ["AI/ML"],
-    title: "Student Performance ML",
-    description:
-      "End-to-end ML pipeline predicting student math scores based on demographic and academic features. Deployed on Azure with Docker, CI/CD, and a Flask web frontend.",
-    tags: ["Python", "Flask", "Docker", "Azure", "Scikit-learn", "CI/CD"],
-    githubUrl: "https://github.com/AmanVerma1067/Student_Performance-ML-Azure-Deployment",
-    liveUrl: "https://student-ml-app.onrender.com",
-  },
-  {
-    image: "/placeholder.svg",
-    category: ["AI/ML", "Web"],
-    title: "Nutri-Vision AI",
-    description:
-      "AI-powered nutrition tracker with food image recognition, voice-to-text logging, health-aware alerts, and goal-based dietary recommendations. Built with Next.js & Supabase.",
-    tags: ["Next.js", "Supabase", "AI", "Voice Recognition", "Health Tech"],
-    githubUrl: "https://github.com/AmanVerma1067/nva",
-  },
-  {
-    image: "/placeholder.svg",
-    category: ["AI/ML"],
-    title: "Nutri-Vision Text Analyzer",
-    description:
-      "NLP system that transforms natural food descriptions into detailed nutritional data using spaCy NER, USDA API integration, and a FastAPI + Streamlit interface.",
-    tags: ["FastAPI", "spaCy", "NLP", "Streamlit", "USDA API"],
-    githubUrl: "https://github.com/Nutri-Vision/Model_Text-Voice",
-  },
-  {
     image: "/images/yatri.jpeg",
     category: ["App", "AI/ML"],
     title: "SahYatri - Smart Bus Assistant",
@@ -86,16 +51,60 @@ const projects = [
     devfolioUrl: "https://devfolio.co/projects/sahyatri-3ca7",
   },
   {
-    image: "/images/tt.png",
-    category: ["App"],
-    title: "StudySync - TimeTable App",
+    image: "/images/neuro.png",
+    category: ["AI/ML"],
+    title: "NeuroMath",
     description:
-      "A visually appealing Flutter timetable and calendar app that helps students efficiently track their class schedules and college events.",
-    tags: ["Flutter", "MongoDB", "Express", "Cors"],
-    githubUrl: "https://github.com/AmanVerma1067/StudySync",
-    apkUrl:
-      "https://github.com/AmanVerma1067/StudySync/releases/tag/v3.0.0",
+      "AI-powered handwritten math solver using a PyTorch CNN that recognizes digits and operators drawn on a digital canvas, achieving 98.6% validation accuracy.",
+    tags: ["PyTorch", "Flask", "OpenCV", "Deep Learning", "Canvas API"],
+    githubUrl: "https://github.com/AmanVerma1067/NeuroMath",
   },
+  {
+    image: "/images/nva.png",
+    category: ["AI/ML", "Web"],
+    title: "Nutri-Vision AI",
+    description:
+      "AI-powered nutrition tracker with food image recognition, voice-to-text logging, health-aware alerts, and goal-based dietary recommendations. Built with Next.js & Supabase.",
+    tags: ["Next.js", "Supabase", "AI", "Voice Recognition", "Health Tech"],
+    githubUrl: "https://github.com/AmanVerma1067/nva",
+  },
+  {
+    image: "/images/drive.png",
+    category: ["AI/ML"],
+    title: "DriveSure",
+    description:
+      "Pay-As-You-Drive insurance risk scoring system that evaluates real-time telematics data to predict crash/claim risk and generate a 0–100 safety score via REST API.",
+    tags: ["Python", "Machine Learning", "REST API", "Telematics", "Risk Modeling"],
+    githubUrl: "https://github.com/AmanVerma1067/DriveSureModel",
+  },
+  {
+    image: "/images/ml.png",
+    category: ["AI/ML"],
+    title: "Student Performance ML",
+    description:
+      "End-to-end ML pipeline predicting student math scores based on demographic and academic features. Deployed on Azure with Docker, CI/CD, and a Flask web frontend.",
+    tags: ["Python", "Flask", "Docker", "Azure", "Scikit-learn", "CI/CD"],
+    githubUrl: "https://github.com/AmanVerma1067/Student_Performance-ML-Azure-Deployment",
+    liveUrl: "https://student-ml-app.onrender.com",
+  },
+  {
+    image: "/images/nvat.png",
+    category: ["AI/ML"],
+    title: "Nutri-Vision Text Analyzer",
+    description:
+      "NLP system that transforms natural food descriptions into detailed nutritional data using spaCy NER, USDA API integration, and a FastAPI + Streamlit interface.",
+    tags: ["FastAPI", "spaCy", "NLP", "Streamlit", "USDA API"],
+    githubUrl: "https://github.com/Nutri-Vision/Model_Text-Voice",
+  },
+  {
+    image: "/images/interview.png",
+    category: ["AI/ML", "Web"],
+    title: "AI-Driven Interview System",
+    description:
+      "Full-stack AI interview platform featuring automated PDF resume parsing, AI-generated technical questions via Hugging Face, and a secure Docker-based code execution sandbox with proctoring and performance analytics.",
+    tags: ["React", "FastAPI", "Docker", "Hugging Face", "PostgreSQL", "Microservices"],
+    githubUrl: "https://github.com/Minor-2-0/Recruitai",
+  }
 ];
 
 export default function Projects() {
@@ -139,8 +148,8 @@ export default function Projects() {
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 className={`px-6 py-2.5 rounded-full font-medium transition-all duration-300 text-sm ${activeCategory === category
-                    ? "bg-blue-500 text-white shadow-lg shadow-blue-500/25"
-                    : "bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-600 border border-slate-200/60 dark:border-slate-600/40"
+                  ? "bg-blue-500 text-white shadow-lg shadow-blue-500/25"
+                  : "bg-white dark:bg-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-600 border border-slate-200/60 dark:border-slate-600/40"
                   }`}
               >
                 {category}

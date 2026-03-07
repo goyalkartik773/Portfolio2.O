@@ -94,14 +94,20 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {/* Changed lg:grid-cols-3 to lg:grid-cols-6 to allow fractional spans */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-6 mb-12">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
               transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className={`relative bg-white dark:bg-slate-700/60 backdrop-blur-sm p-6 rounded-2xl border border-slate-200/60 dark:border-slate-600/40 hover:border-transparent transition-all duration-500 group hover:shadow-xl ${categoryIndex === 4 ? "md:col-span-2 lg:col-span-1" : ""
+              className={`relative bg-white dark:bg-slate-700/60 backdrop-blur-sm p-6 rounded-2xl border border-slate-200/60 dark:border-slate-600/40 hover:border-transparent transition-all duration-500 group hover:shadow-xl ${
+                // Boxes 1-3 span 2 cols (3 per row), Boxes 4-5 span 3 cols (2 per row) on LG screens
+                categoryIndex < 3 ? "lg:col-span-2" : "lg:col-span-3"
+                } ${
+                // Box 5 spans 2 columns on MD screens to center it on the 3rd row
+                categoryIndex === 4 ? "md:col-span-2" : "md:col-span-1"
                 }`}
             >
               {/* Hover glow */}
