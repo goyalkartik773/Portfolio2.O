@@ -7,9 +7,9 @@ import { Award, Code, Brain, Smartphone, GraduationCap, Trophy, Lightbulb, Sword
 
 const highlights = [
   {
-    icon: Code,
-    title: "Full-Stack Developer",
-    description: "End-to-end Development",
+    icon: Brain,
+    title: "AI/ML Enthusiast",
+    description: "Machine Learning Focus",
   },
   {
     icon: SwordsIcon,
@@ -17,9 +17,9 @@ const highlights = [
     description: "DSA in C++ | Codeforces & CodeChef",
   },
   {
-    icon: Brain,
-    title: "AI/ML Enthusiast",
-    description: "Machine Learning Focus",
+    icon: Code,
+    title: "Full-Stack Developer",
+    description: "End-to-end Development",
   },
   {
     icon: Smartphone,
@@ -129,7 +129,7 @@ export default function About() {
                     </p>
                     <div className="flex items-center">
                       <span className="text-sm font-medium text-slate-900 dark:text-slate-100">CGPA:</span>
-                      <span className="ml-2 text-sm text-blue-500 dark:text-blue-400 font-semibold">8.5 (latest)</span>
+                      <span className="ml-2 text-sm text-blue-500 dark:text-blue-400 font-semibold">8.6 (latest)</span>
                     </div>
                   </div>
                 </motion.div>
