@@ -13,20 +13,20 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    value: "amanverma1067@gmail.com",
-    href: "mailto:amanverma1067@gmail.com",
+    value: "goyalkartik773@gmail.com",
+    href: "mailto:goyalkartik773@gmail.com",
   },
   {
     icon: FaWhatsapp,
     title: "WhatsApp",
-    value: "Let's chat on WhatsApp",
-    href: "https://wa.me/919451842598",
+    value: "Available for chat",
+    href: "https://wa.me/918920987773",
   },
   {
     icon: MapPin,
     title: "Location",
-    value: "Noida, Uttar Pradesh, India",
-    href: "https://www.google.com/maps/place/Noida",
+    value: "Noida, India",
+    href: "https://www.google.com/maps/place/Noida,+Uttar+Pradesh",
   },
 ]
 
@@ -43,7 +43,11 @@ export default function Contact() {
     const loadingToast = toast.loading("Sending message...")
 
     try {
-      await emailjs.sendForm("service_fes9afn", "template_j3u36me", formRef.current!, "J6AP0JOZDlt0--Hm0")
+      // Replace with your EmailJS configuration
+      // await emailjs.sendForm("your_service_id", "your_template_id", formRef.current!, "your_public_key")
+      
+      // For now, just simulate a successful send
+      await new Promise(resolve => setTimeout(resolve, 1000))
 
       toast.success("Message sent successfully! 🎉", {
         id: loadingToast,
@@ -79,7 +83,7 @@ export default function Contact() {
             Contact Me
           </h2>
           <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how we can work together to bring your ideas to life.
+            Ready to build something amazing? Let's collaborate on AI/ML projects, full-stack applications, or innovative solutions that push boundaries.
           </p>
         </motion.div>
 
@@ -93,11 +97,11 @@ export default function Contact() {
           >
             <div>
               <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-100 mb-6">
-                Let's start a conversation
+                Let's build something extraordinary
               </h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                I'm always interested in hearing about new projects and opportunities. Whether you're a company looking
-                to hire, or someone with a project idea, I'd love to hear from you.
+                Passionate about creating innovative AI/ML solutions and full-stack applications. Whether you need a competitive programmer for complex algorithms, 
+                an AI engineer for machine learning projects, or a full-stack developer for web applications - I'm ready to bring your vision to life.
               </p>
             </div>
 
@@ -157,21 +161,21 @@ export default function Contact() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Subject</label>
+                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Project Type</label>
                 <input
                   type="text"
                   name="subject"
-                  placeholder="Project discussion"
+                  placeholder="AI/ML Project | Web Development | Collaboration"
                   className="w-full px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 rounded-lg border border-slate-200 dark:border-slate-600 focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none transition-colors placeholder-slate-400 dark:placeholder-slate-500"
                 />
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Message *</label>
+                <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Project Description *</label>
                 <textarea
                   name="user_project"
                   required
-                  placeholder="Tell me about your project..."
+                  placeholder="Tell me about your AI/ML project, web application, or collaboration idea..."
                   rows={6}
                   className="w-full px-4 py-3 bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 rounded-lg border border-slate-200 dark:border-slate-600 focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none transition-colors placeholder-slate-400 dark:placeholder-slate-500 resize-none"
                 />

@@ -1,34 +1,16 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Youtube, Linkedin, ExternalLink } from "lucide-react";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 import { Typewriter } from "react-simple-typewriter";
-
-// Devfolio icon
-const DevfolioIcon = ({ size = 20 }: { size?: number }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 60.3 66.2"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M60.3 36.4C60.3 52 48.6 64.7 33.8 66c0 0-19.1 0.5-25.4-0.1c-2.4-0.3-4.4-1.8-5.3-4c0.9 0.4 1.8 0.7 2.8 0.8C8 62.9 11.5 63 16.4 63c7.2 0 15.1-0.2 15.1-0.2h0.1c7.9-0.7 15.2-4.3 20.4-10.2c4.5-5 7.4-11.3 8.2-17.9C60.3 35.2 60.3 35.8 60.3 36.4z"
-      fill="#3770FF"
-    />
-    <path
-      d="M58 30c0 15.6-11.7 28.3-26.6 29.5c0 0-19.1 0.5-25.4-0.1c-3.4-0.3-5.9-3.5-6-7.1l0.1-45c0.1-3.6 2.7-6.8 6.1-7.1c6.3-0.5 25.4 0.1 25.4 0.1C46.4 1.6 58 14.4 58 30z"
-      fill="#3770FF"
-    />
-  </svg>
-);
+import { SiLeetcode, SiCodeforces, SiCodechef } from "react-icons/si";
 
 const socialLinks = [
-  { href: "https://github.com/AmanVerma1067", icon: Github },
-  { href: "http://www.youtube.com/@AmanVerma1067yt", icon: Youtube },
-  { href: "https://www.linkedin.com/in/amanverma1067/", icon: Linkedin },
-  { href: "https://devfolio.co/@Aman1067", icon: DevfolioIcon }, // Devfolio
+  { href: "https://www.linkedin.com/in/kartik-goel-a95b2630b/", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://github.com/goyalkartik773", icon: Github, label: "GitHub" },
+  { href: "https://leetcode.com/u/Kartikgoel773/", icon: SiLeetcode, label: "LeetCode" },
+  { href: "https://codeforces.com/profile/goyalkartik773", icon: SiCodeforces, label: "Codeforces" },
+  { href: "https://www.codechef.com/users/", icon: SiCodechef, label: "CodeChef" },
 ];
 
 
@@ -58,7 +40,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="text-xl md:text-2xl text-slate-600 dark:text-slate-400"
               >
-                👋 Hi, I’m
+                👋 Hi, I'm
               </motion.h3>
 
               <motion.h1
@@ -67,7 +49,7 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
               >
-                Aman Verma
+KARTIK GOEL
               </motion.h1>
 
               {/* Typing animation */}
@@ -79,10 +61,9 @@ export default function Hero() {
               >
                 <Typewriter
                   words={[
-                    "AI/ML Engineer 🤖",
-                    "Competitive Programmer ⚔️",
-                    "Full Stack Developer 💻",
-                    "Flutter Developer 📱",
+                    "FULL STACK DEVELOPER 💻",
+                    "SOFTWARE DEVELOPER 🛠️",
+                    "ML/AI Developer (in progress) 🤖",
                   ]}
                   loop={0}
                   cursor
@@ -99,19 +80,34 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 1.2 }}
                 className="max-w-lg mx-auto lg:mx-0 text-lg leading-relaxed text-slate-600 dark:text-slate-400"
               >
-                I build intelligent AI/ML systems and high-performance web applications — blending deep learning, elegant design, and real-world scalability.
+Passionate Full Stack Developer with a strong foundation in web development and growing expertise in ML/AI. I love solving complex problems and turning ideas into reality through code.
               </motion.p>
             </div>
 
-            <motion.button
-              onClick={handleContactClick}
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-medium transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
+              className="flex flex-wrap gap-4 justify-center lg:justify-start"
             >
-              Let’s Talk
-            </motion.button>
+              <motion.button
+                onClick={handleContactClick}
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-7 py-3.5 rounded-xl font-medium transition-all duration-300 hover:shadow-lg"
+              >
+                <Mail size={18} />
+                Contact
+              </motion.button>
+              <motion.a
+                href="/cv.pdf"
+                download="CV.pdf"
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center gap-2 border-2 border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-slate-800 px-7 py-3.5 rounded-xl font-medium transition-all duration-300"
+              >
+                <Download size={18} />
+                Download CV
+              </motion.a>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 60 }}
@@ -125,7 +121,7 @@ export default function Hero() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Link to ${social.href}`}
+                  aria-label={`Visit Kartik's ${social.label} profile`}
                   whileHover={{ scale: 1.2 }}
                   transition={{ type: "spring", stiffness: 300 }}
                   className="p-3 rounded-full bg-white dark:bg-slate-900 shadow-lg hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 text-blue-500 dark:text-blue-300"
@@ -144,22 +140,31 @@ export default function Hero() {
             className="justify-self-center relative"
           >
             {/* Animated Glow */}
-            <div
-              className="absolute -inset-10 z-0 rounded-full blur-3xl opacity-50 pointer-events-none"
-              style={{
-                background:
-                  "radial-gradient(circle at 60% 40%, #3b82f6 0%, #6366f1 60%, transparent 100%)",
+            <motion.div
+              className="absolute -inset-10 z-0 rounded-full blur-3xl opacity-60 pointer-events-none"
+              animate={{
+                background: [
+                  "radial-gradient(circle at 60% 40%, #3b82f6 0%, #6366f1 50%, transparent 100%)",
+                  "radial-gradient(circle at 60% 40%, #8b5cf6 0%, #ec4899 50%, transparent 100%)",
+                  "radial-gradient(circle at 60% 40%, #3b82f6 0%, #6366f1 50%, transparent 100%)",
+                ],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
               }}
             />
 
             {/* Glassmorphism Blob */}
             <motion.div
               animate={{
-                rotate: [0, 8, -8, 0],
-                scale: [1, 1.03, 1],
+                rotate: [0, 5, -5, 0],
+                scale: [1, 1.02, 1],
+                y: [0, -10, 0],
               }}
               transition={{
-                duration: 7,
+                duration: 8,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -188,14 +193,14 @@ export default function Hero() {
                   <rect width="600" height="700" fill="url(#dots)" />
                   <rect width="600" height="700" fill="rgba(59,130,246,0.08)" />
                   <image
-                    href="/images/perfil.png"
-                    x="80"
-                    y="80"
-                    width="440"
-                    height="540"
+                    href="/images/myImg.png"
+                    x="0"
+                    y="0"
+                    width="600"
+                    height="700"
                     style={{
                       filter:
-                        "drop-shadow(0 8px 32px rgba(59,130,246,0.18))",
+                        "drop-shadow(0 8px 32px rgba(59,130,246,0.25))",
                     }}
                   />
                 </g>

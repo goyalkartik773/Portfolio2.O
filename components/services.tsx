@@ -3,22 +3,36 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Brain, Swords, Code, Smartphone } from "lucide-react"
+import { Brain, Swords, Code, Sparkles } from "lucide-react"
 
 const services = [
   {
     icon: Brain,
-    title: "AI/ML & Generative AI",
+    title: "Machine Learning",
     description:
-      "Building intelligent systems with deep learning, NLP, and computer vision — from RAG pipelines to end-to-end ML deployments.",
+      "Building intelligent systems with deep learning, computer vision, and predictive analytics — from data preprocessing to model deployment.",
     features: [
-      "RAG Pipelines & LLM Integration",
       "Deep Learning (PyTorch, TensorFlow)",
-      "Computer Vision & NLP",
-      "ML Model Deployment (Azure, Docker)",
+      "Computer Vision & Image Processing",
+      "Data Analytics & Visualization",
+      "ML Model Deployment (Docker, Cloud)",
     ],
     gradient: "from-violet-500 to-purple-600",
     hoverGradient: "group-hover:from-violet-600 group-hover:to-purple-700",
+  },
+  {
+    icon: Sparkles,
+    title: "Generative AI",
+    description:
+      "Creating cutting-edge AI solutions with LLMs, RAG pipelines, and prompt engineering — from chatbots to content generation systems.",
+    features: [
+      "RAG Pipelines & Vector Databases",
+      "OpenAI & Gemini API Integration",
+      "Prompt Engineering & Fine-tuning",
+      "Custom LLM Applications",
+    ],
+    gradient: "from-purple-500 to-pink-600",
+    hoverGradient: "group-hover:from-purple-600 group-hover:to-pink-700",
   },
   {
     icon: Swords,
@@ -47,20 +61,6 @@ const services = [
     ],
     gradient: "from-cyan-500 to-blue-500",
     hoverGradient: "group-hover:from-cyan-600 group-hover:to-blue-600",
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile App Development",
-    description:
-      "Building scalable cross-platform mobile apps with Flutter, real-time data pipelines, and native-feel UIs.",
-    features: [
-      "Flutter / Dart Development",
-      "Firebase & API Integration",
-      "Real-time Updates & Notifications",
-      "Cross-platform UI Engineering",
-    ],
-    gradient: "from-emerald-500 to-teal-500",
-    hoverGradient: "group-hover:from-emerald-600 group-hover:to-teal-600",
   },
 ]
 

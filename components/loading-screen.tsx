@@ -4,12 +4,12 @@ import { useState, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
 const bootLines = [
-  { text: "> Initializing system...", delay: 0 },
-  { text: "> Loading neural networks...", delay: 300 },
-  { text: "> Compiling portfolio modules...", delay: 600 },
-  { text: "> Mounting UI components...", delay: 900 },
-  { text: "> Establishing connections...", delay: 1200 },
-  { text: "> Ready.", delay: 1500 },
+  { text: "> Initializing Kartik's portfolio...", delay: 0 },
+  { text: "> Loading AI/ML expertise...", delay: 300 },
+  { text: "> Activating full-stack capabilities...", delay: 600 },
+  { text: "> Compiling 9+ projects...", delay: 900 },
+  { text: "> Establishing competitive programming stats...", delay: 1200 },
+  { text: "> Portfolio ready. Welcome!", delay: 1500 },
 ]
 
 export default function LoadingScreen() {
@@ -64,14 +64,14 @@ export default function LoadingScreen() {
           exit={{ opacity: 0, scale: 1.05 }}
           transition={{ duration: 0.5 }}
           className="fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden"
-          style={{ background: "linear-gradient(145deg, #0a0e1a 0%, #0f172a 50%, #0a0e1a 100%)" }}
+          style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e1b4b 25%, #312e81 50%, #1e1b4b 75%, #0f172a 100%)" }}
         >
-          {/* Grid overlay */}
+          {/* Rainbow grid overlay */}
           <div
-            className="absolute inset-0 opacity-[0.04]"
+            className="absolute inset-0 opacity-[0.06]"
             style={{
-              backgroundImage: `linear-gradient(rgba(59,130,246,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.5) 1px, transparent 1px)`,
-              backgroundSize: "60px 60px",
+              backgroundImage: `linear-gradient(rgba(59,130,246,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)`,
+              backgroundSize: "80px 80px",
             }}
           />
 
@@ -101,9 +101,25 @@ export default function LoadingScreen() {
             ))}
           </div>
 
-          {/* Glow orbs */}
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-violet-500/10 rounded-full blur-3xl" />
+          {/* Rainbow glow orbs */}
+          <motion.div 
+            className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full blur-3xl"
+            style={{ background: "radial-gradient(circle, rgba(59,130,246,0.15) 0%, rgba(139,92,246,0.1) 50%, transparent 70%)" }}
+            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
+            transition={{ duration: 4, repeat: Infinity }}
+          />
+          <motion.div 
+            className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-3xl"
+            style={{ background: "radial-gradient(circle, rgba(236,72,153,0.15) 0%, rgba(239,68,68,0.1) 50%, transparent 70%)" }}
+            animate={{ scale: [1.2, 1, 1.2], opacity: [0.4, 0.2, 0.4] }}
+            transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+          />
+          <motion.div 
+            className="absolute top-1/2 right-1/3 w-64 h-64 rounded-full blur-3xl"
+            style={{ background: "radial-gradient(circle, rgba(34,197,94,0.12) 0%, rgba(16,185,129,0.08) 50%, transparent 70%)" }}
+            animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.5, 0.2] }}
+            transition={{ duration: 5, repeat: Infinity, delay: 2 }}
+          />
 
           {/* Logo */}
           <motion.div
@@ -115,9 +131,9 @@ export default function LoadingScreen() {
             {/* Code brackets logo */}
             <div className="relative flex items-center gap-3">
               <motion.span
-                className="text-4xl font-mono font-bold text-blue-400"
-                animate={{ opacity: [1, 0.4, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                className="text-4xl font-mono font-bold"
+                animate={{ color: ["#3b82f6", "#8b5cf6", "#ec4899", "#3b82f6"] }}
+                transition={{ duration: 3, repeat: Infinity }}
               >
                 &lt;
               </motion.span>
@@ -128,16 +144,16 @@ export default function LoadingScreen() {
                   style={
                     glitchActive
                       ? { textShadow: "2px 0 #ff0040, -2px 0 #00ff88", transform: "translateX(2px)" }
-                      : { textShadow: "0 0 20px rgba(59,130,246,0.3)" }
+                      : { textShadow: "0 0 30px rgba(139,92,246,0.5), 0 0 60px rgba(59,130,246,0.3)" }
                   }
                 >
-                  AV
+                  KG
                 </motion.div>
               </div>
               <motion.span
-                className="text-4xl font-mono font-bold text-blue-400"
-                animate={{ opacity: [1, 0.4, 1] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 0.3 }}
+                className="text-4xl font-mono font-bold"
+                animate={{ color: ["#ec4899", "#3b82f6", "#8b5cf6", "#ec4899"] }}
+                transition={{ duration: 3, repeat: Infinity, delay: 0.5 }}
               >
                 /&gt;
               </motion.span>
@@ -159,9 +175,9 @@ export default function LoadingScreen() {
             className="text-center mb-8"
           >
             <div className="text-xl font-medium text-white/90 mb-1">
-              Aman <span className="text-blue-400">Verma</span>
+              Kartik <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">Goel</span>
             </div>
-            <div className="text-sm text-slate-500 font-mono">AI/ML Engineer & Full Stack Developer</div>
+            <div className="text-sm text-slate-400 font-mono">Full Stack Developer | AI/ML Engineer | Competitive Programmer</div>
           </motion.div>
 
           {/* Terminal boot text */}
@@ -195,12 +211,13 @@ export default function LoadingScreen() {
               <span>loading</span>
               <span>{Math.round(progress)}%</span>
             </div>
-            <div className="h-1 bg-slate-800 rounded-full overflow-hidden border border-slate-700/50">
+            <div className="h-1 bg-slate-800/50 rounded-full overflow-hidden border border-slate-700/30 backdrop-blur-sm">
               <motion.div
                 className="h-full rounded-full"
                 style={{
-                  background: "linear-gradient(90deg, #3b82f6, #8b5cf6, #3b82f6)",
-                  backgroundSize: "200% 100%",
+                  background: "linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #22c55e, #3b82f6)",
+                  backgroundSize: "300% 100%",
+                  boxShadow: "0 0 20px rgba(139,92,246,0.5)",
                 }}
                 initial={{ width: 0 }}
                 animate={{
@@ -209,7 +226,7 @@ export default function LoadingScreen() {
                 }}
                 transition={{
                   width: { duration: 0.3 },
-                  backgroundPosition: { duration: 2, repeat: Infinity, ease: "linear" },
+                  backgroundPosition: { duration: 3, repeat: Infinity, ease: "linear" },
                 }}
               />
             </div>

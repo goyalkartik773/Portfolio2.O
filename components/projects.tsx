@@ -6,105 +6,108 @@ import { useRef, useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 
-const projectCategories = ["All", "AI/ML", "Web", "App"];
+interface Project {
+  image: string;
+  category: string[];
+  title: string;
+  description: string;
+  tags: string[];
+  githubUrl: string;
+  liveUrl?: string;
+  apkUrl?: string;
+  previewUrl?: string;
+  devfolioUrl?: string;
+}
 
-const projects = [
+const projectCategories = ["All", "AI/ML", "GenAI", "Web"];
+
+const projects: Project[] = [
   {
-    image: "/images/tt.png",
-    category: ["App"],
-    title: "StudySync - TimeTable App",
+    image: "/images/eathub.png",
+    category: ["Web"],
+    title: "EatHub - Food Delivery Platform",
     description:
-      "A visually appealing Flutter timetable and calendar app that helps students efficiently track their class schedules and college events.",
-    tags: ["Flutter", "MongoDB", "Express", "Cors"],
-    githubUrl: "https://github.com/AmanVerma1067/StudySync",
-    apkUrl:
-      "https://github.com/AmanVerma1067/StudySync/releases/tag/v3.0.0",
+      "A modern full-stack food delivery platform connecting hungry customers with their favorite restaurants. Features real-time order tracking, multi-role authentication, and a developer-friendly architecture with Socket.io integration.",
+    tags: ["React.js", "Node.js", "MongoDB", "Socket.io", "Firebase"],
+    githubUrl: "https://github.com/goyalkartik773/eathub",
+    liveUrl: "https://eathub-swart.vercel.app",
   },
   {
-    image: "/images/chess.png",
+    image: "/images/echomind.png",
     category: ["AI/ML", "Web"],
-    title: "Chessify AI",
+    title: "EchoMind - AI Voice Assistant",
     description:
-      "Full-featured chess app with AI opponent (Minimax + Stockfish) and real-time PvP multiplayer via WebSockets. Features live chat, spectator mode, game timers, and drag-and-drop interaction.",
-    tags: [
-      "Next.js",
-      "TypeScript",
-      "Flask",
-      "Stockfish",
-      "Socket.IO",
-      "WebSocket",
-    ],
-    githubUrl: "https://github.com/AmanVerma1067/Chessify-WebApp",
-    liveUrl: "https://chessify.aman1067.xyz/",
-    previewUrl: "https://www.youtube.com/watch?v=kzqac5qWbYQ",
+      "A full-stack voice-enabled virtual assistant powered by Google Gemini AI. Features real-time speech recognition, natural language processing, and intelligent command execution with personalized avatars and wake-word detection.",
+    tags: ["React.js", "Node.js", "Google Gemini AI", "Web Speech API", "MongoDB"],
+    githubUrl: "https://github.com/goyalkartik773/EchoMind",
+    liveUrl: "https://virtualechomind.netlify.app",
   },
   {
-    image: "/images/yatri.jpeg",
-    category: ["App", "AI/ML"],
-    title: "SahYatri - Smart Bus Assistant",
+    image: "/images/jiitbot.png",
+    category: ["GenAI", "Web"],
+    title: "JIIT Assistant - Institutional AI Platform",
     description:
-      "An intelligent public transport analytics platform offering real-time bus occupancy tracking and AI-powered alerts.",
-    tags: ["Flutter", "Next.js", "PostgreSQL", "OpenCV"],
-    githubUrl: "https://github.com/AmanVerma1067/SahYatri",
-    previewUrl:
-      "https://www.youtube.com/watch?v=ESh_J48Pc3w&feature=youtu.be",
-    devfolioUrl: "https://devfolio.co/projects/sahyatri-3ca7",
+      "A comprehensive AI-powered web application for JIIT students featuring intelligent chatbot, project synopsis generator, social media hub, and live portal with real-time campus updates and ML-powered insights.",
+    tags: ["Python", "Streamlit", "FAISS", "Google Gemini AI", "scikit-learn"],
+    githubUrl: "https://github.com/goyalkartik773/JiitBot",
+    liveUrl: "https://jiitbot-assistant.streamlit.app",
   },
   {
-    image: "/images/neuro.png",
+    image: "/images/sortifier.png",
+    category: ["Web"],
+    title: "Sortifier - Algorithm Visualizer",
+    description:
+      "A professional C++ desktop application visualizing 14 sorting algorithms with real-time statistics, gradient graphics, and pitch-based audio feedback. Features stunning visual effects and educational value for understanding algorithm complexity.",
+    tags: ["C++", "SFML", "Data Visualization", "Algorithms", "Audio Programming"],
+    githubUrl: "https://github.com/goyalkartik773/SORT_VISUALIZER",
+    liveUrl: "https://github.com/goyalkartik773/SORT_VISUALIZER/releases/tag/sortifier-v1.0",
+  },
+  {
+    image: "/images/deeppacket.png",
+    category: ["Web"],
+    title: "NetSpector - Network Intelligence System",
+    description:
+      "Advanced network intelligence platform that inspects and analyzes network traffic in real-time. Features TLS SNI extraction, application identification, flow-based traffic control, and multi-threaded packet processing architecture.",
+    tags: ["C++", "Network Intelligence", "Traffic Analysis", "Cybersecurity", "TLS/SSL", "PCAP"],
+    githubUrl: "https://github.com/goyalkartik773/DPI-Engine",
+  },
+  {
+    image: "/images/VibeTube.png",
+    category: ["Web"],
+    title: "VibeTube - Video Streaming Platform",
+    description:
+      "A feature-rich video streaming platform built with MERN stack, JWT authentication, and Firebase Storage. Features video uploads, channels, playlists, comments, likes, and YouTube studio for content management.",
+    tags: ["MERN Stack", "React.js", "Node.js", "MongoDB", "Firebase Storage", "JWT"],
+    githubUrl: "https://github.com/goyalkartik773/Youtube-Clone-MERN",
+  },
+  {
+    image: "/images/medincine.png",
     category: ["AI/ML"],
-    title: "NeuroMath",
+    title: "Medicine Recommendation System",
     description:
-      "AI-powered handwritten math solver using a PyTorch CNN that recognizes digits and operators drawn on a digital canvas, achieving 98.6% validation accuracy.",
-    tags: ["PyTorch", "Flask", "OpenCV", "Deep Learning", "Canvas API"],
-    githubUrl: "https://github.com/AmanVerma1067/NeuroMath",
+      "An intelligent ML-powered system designed to assist healthcare professionals in selecting appropriate medications based on patient history, symptoms, and drug interactions. Features predictive models and personalized recommendations.",
+    tags: ["Machine Learning", "Healthcare AI", "Data Processing", "Predictive Analytics", "Medical ML"],
+    githubUrl: "https://github.com/goyalkartik773/Medicine-Recommendation-System",
   },
   {
-    image: "/images/nva.png",
-    category: ["AI/ML", "Web"],
-    title: "Nutri-Vision AI",
+    image: "/images/metroroute.png",
+    category: ["Web"],
+    title: "Rapid Metro Route Finder",
     description:
-      "AI-powered nutrition tracker with food image recognition, voice-to-text logging, health-aware alerts, and goal-based dietary recommendations. Built with Next.js & Supabase.",
-    tags: ["Next.js", "Supabase", "AI", "Voice Recognition", "Health Tech"],
-    githubUrl: "https://github.com/AmanVerma1067/nva",
+      "Advanced DSA project implementing multiple graph algorithms to find optimal metro routes. Features Dijkstra, Floyd-Warshall, BFS, and backtracking algorithms with real-time visualization using SFML for urban mobility solutions.",
+    tags: ["C++", "Data Structures", "Graph Algorithms", "SFML", "Dijkstra", "Visualization"],
+    githubUrl: "https://github.com/goyalkartik773/Rapid-Metro-Route-Finder",
   },
   {
-    image: "/images/drive.png",
-    category: ["AI/ML"],
-    title: "DriveSure",
+    image: "/images/razorpay.jpeg",
+    category: ["Web"],
+    title: "Razorpay Clone - Payment Gateway",
     description:
-      "Pay-As-You-Drive insurance risk scoring system that evaluates real-time telematics data to predict crash/claim risk and generate a 0–100 safety score via REST API.",
-    tags: ["Python", "Machine Learning", "REST API", "Telematics", "Risk Modeling"],
-    githubUrl: "https://github.com/AmanVerma1067/DriveSureModel",
+      "Modern payment gateway frontend clone with glassmorphism design, smooth animations, and complete responsive layout. Features hero section, payment suite, business banking, testimonials, and mobile-friendly interface using Tailwind CSS.",
+    tags: ["HTML5", "CSS3", "JavaScript", "Tailwind CSS", "Responsive Design", "Glassmorphism"],
+    githubUrl: "https://github.com/goyalkartik773/Razorpay-Clone",
+    liveUrl: "https://razorpay-clone-demo.vercel.app",
   },
-  {
-    image: "/images/ml.png",
-    category: ["AI/ML"],
-    title: "Student Performance ML",
-    description:
-      "End-to-end ML pipeline predicting student math scores based on demographic and academic features. Deployed on Azure with Docker, CI/CD, and a Flask web frontend.",
-    tags: ["Python", "Flask", "Docker", "Azure", "Scikit-learn", "CI/CD"],
-    githubUrl: "https://github.com/AmanVerma1067/Student_Performance-ML-Azure-Deployment",
-    liveUrl: "https://student-ml-app.onrender.com",
-  },
-  {
-    image: "/images/nvat.png",
-    category: ["AI/ML"],
-    title: "Nutri-Vision Text Analyzer",
-    description:
-      "NLP system that transforms natural food descriptions into detailed nutritional data using spaCy NER, USDA API integration, and a FastAPI + Streamlit interface.",
-    tags: ["FastAPI", "spaCy", "NLP", "Streamlit", "USDA API"],
-    githubUrl: "https://github.com/Nutri-Vision/Model_Text-Voice",
-  },
-  {
-    image: "/images/interview.png",
-    category: ["AI/ML", "Web"],
-    title: "AI-Driven Interview System",
-    description:
-      "Full-stack AI interview platform featuring automated PDF resume parsing, AI-generated technical questions via Hugging Face, and a secure Docker-based code execution sandbox with proctoring and performance analytics.",
-    tags: ["React", "FastAPI", "Docker", "Hugging Face", "PostgreSQL", "Microservices"],
-    githubUrl: "https://github.com/Minor-2-0/Recruitai",
-  }
 ];
 
 export default function Projects() {
@@ -168,12 +171,16 @@ export default function Projects() {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="group bg-white dark:bg-slate-700/70 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-200/40 dark:border-slate-600/30"
             >
-              <div className="relative h-48 overflow-hidden bg-slate-100 dark:bg-slate-600">
+              <div className="relative h-56 overflow-hidden bg-slate-100 dark:bg-slate-600">
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
                   fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="object-contain transition-transform duration-500 group-hover:scale-105"
+                  style={{ objectPosition: 'top center' }}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  quality={75}
                 />
                 {/* Overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

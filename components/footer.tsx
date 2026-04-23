@@ -3,12 +3,12 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Youtube, Instagram, Twitter } from "lucide-react"
+import { Github, Linkedin, Twitter } from "lucide-react"
 
 const socialLinks = [
-  { href: "http://www.youtube.com/@AmanVerma1067yt", icon: Youtube },
-  { href: "https://www.instagram.com/aman.v.1067/", icon: Instagram },
-  { href: "https://x.com/Mr_aman__", icon: Twitter },
+  { href: "https://github.com/goyalkartik773", icon: Github },
+  { href: "https://linkedin.com/in/kartik-goel", icon: Linkedin },
+  { href: "https://twitter.com/kartikgoel773", icon: Twitter },
 ]
 
 export default function Footer() {
@@ -26,9 +26,9 @@ export default function Footer() {
         <div className="grid lg:grid-cols-3 gap-8 items-center text-center lg:text-left">
           <div>
             <h1 className="text-2xl lg:text-3xl font-semibold text-slate-900 dark:text-slate-100 mb-2">
-              Aman <span className="text-blue-500 dark:text-blue-400">Verma</span>
+              Kartik <span className="text-blue-500 dark:text-blue-400">Goel</span>
             </h1>
-            <h2 className="text-slate-600 dark:text-slate-300">AI/ML Engineer & Full Stack Developer</h2>
+            <h2 className="text-slate-600 dark:text-slate-300">Full Stack Developer</h2>
           </div>
 
           <div className="flex justify-center lg:justify-center space-x-5">
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           <span className="text-sm text-slate-500 dark:text-slate-400 lg:justify-self-end">
-            © {new Date().getFullYear()} AmanCodes. All rights reserved
+            © {new Date().getFullYear()} Kartik Goel. All rights reserved
           </span>
         </div>
       </motion.div>

@@ -49,6 +49,85 @@
     background-color: theme("colors.slate.500");
   }
 
+  /* Twinkling Stars Animation */
+  @keyframes twinkle {
+    0%, 100% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(120deg); }
+    66% { transform: translateY(5px) rotate(240deg); }
+  }
+
+  .stars-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .star {
+    position: absolute;
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899);
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+    will-change: opacity, transform;
+  }
+
+  .star::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .star-small {
+    width: 2px;
+    height: 2px;
+    animation-duration: 2s;
+  }
+
+  .star-medium {
+    width: 3px;
+    height: 3px;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
+  }
+
+  .star-large {
+    width: 4px;
+    height: 4px;
+    animation-duration: 4s;
+    animation-delay: 1s;
+  }
+
+  .shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    animation: shoot 8s linear infinite;
+    opacity: 0;
+  }
+
+  @keyframes shoot {
+    0% { transform: translateX(-100px) translateY(-100px) rotate(-45deg); opacity: 0; }
+    10% { opacity: 1; }
+    20% { transform: translateX(100vw) translateY(100vh) rotate(-45deg); opacity: 0; }
+    100% { opacity: 0; }
+  }
+
   ::-webkit-scrollbar-thumb:hover {
     background-color: theme("colors.slate.500");
   }

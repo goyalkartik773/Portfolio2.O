@@ -34,8 +34,9 @@ export default function Navbar() {
       const scrollY = window.pageYOffset
 
       sections.forEach((section) => {
-        const sectionHeight = section.offsetHeight
-        const sectionTop = section.offsetTop - 100
+        const htmlSection = section as HTMLElement
+        const sectionHeight = htmlSection.offsetHeight
+        const sectionTop = htmlSection.offsetTop - 100
         const sectionId = section.getAttribute("id")
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -69,7 +70,7 @@ export default function Navbar() {
     >
       <nav className="container mx-auto px-6 h-16 flex justify-between items-center">
         <a href="#home" className="text-slate-900 dark:text-slate-100 font-medium text-lg">
-          Aman <span className="text-blue-500 dark:text-blue-400">Verma</span>
+          Kartik <span className="text-blue-500 dark:text-blue-400">Goel</span>
         </a>
 
         {/* Desktop Menu */}

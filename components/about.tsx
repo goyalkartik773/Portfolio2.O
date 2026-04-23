@@ -3,28 +3,28 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Award, Code, Brain, Smartphone, GraduationCap, Trophy, Lightbulb, SwordsIcon } from "lucide-react"
+import { Award, Code, Brain, GraduationCap, Trophy, Lightbulb, SwordsIcon, Sparkles } from "lucide-react"
 
 const highlights = [
   {
     icon: Brain,
-    title: "AI/ML Enthusiast",
-    description: "Machine Learning Focus",
+    title: "Machine Learning",
+    description: "Deep Learning & Analytics",
+  },
+  {
+    icon: Sparkles,
+    title: "Generative AI",
+    description: "LLMs & Prompt Engineering",
   },
   {
     icon: SwordsIcon,
     title: "Competitive Programmer",
-    description: "DSA in C++ | Codeforces & CodeChef",
+    description: "CF 1300+ | LC 1700+ | CC 1600+ | 1000+ Problems",
   },
   {
     icon: Code,
     title: "Full-Stack Developer",
     description: "End-to-end Development",
-  },
-  {
-    icon: Smartphone,
-    title: "Mobile Developer",
-    description: "Cross-platform Apps",
   },
 ]
 
@@ -54,11 +54,10 @@ export default function About() {
 
             <div className="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
               <p className="text-lg">
-                I'm a passionate full-stack developer with a strong academic foundation in computer science, and a deep interest in artificial intelligence and machine learning. Alongside building scalable web and mobile applications, I actively engage in competitive programming and solve algorithmic challenges using C++.
+                I'm a passionate Computer Science Engineering student at JIIT NOIDA with a strong foundation in full-stack development and competitive programming. I love building scalable web applications and solving complex problems through clean, efficient code.
               </p>
               <p>
-                My award-winning project <span className="text-blue-500 dark:text-blue-400 font-medium">SahYatri</span>{" "}
-                reflects my ability to build impactful, real-world tech solutions—blending intelligent systems with intuitive user experiences. I thrive on solving complex problems, whether it's through elegant UI or optimized algorithms.
+                My expertise spans MERN/Next.js stack, data structures & algorithms, and emerging AI/ML technologies. I'm actively involved in competitive programming and always eager to learn new technologies and tackle challenging problems.
               </p>
             </div>
 
@@ -120,16 +119,15 @@ export default function About() {
 
                   <div className="bg-white/20 dark:bg-slate-800/50 rounded-lg p-4 backdrop-blur-sm">
                     <h4 className="font-medium text-slate-900 dark:text-slate-100 mb-1">
-                      Jaypee Institute of Information Technology
+                      Jaypee Institute of Information Technology (JIIT)
                     </h4>
                     <p className="text-sm text-slate-600 dark:text-slate-400 mb-2">2023 – 2027</p>
                     <p className="text-sm text-slate-700 dark:text-slate-300 mb-2">
-                      Bachelor of Technology in Electronics and Communication Engineering with specialization in
-                      Computer Science (ECS)
+                      Bachelor of Technology in Computer Science Engineering
                     </p>
                     <div className="flex items-center">
                       <span className="text-sm font-medium text-slate-900 dark:text-slate-100">CGPA:</span>
-                      <span className="ml-2 text-sm text-blue-500 dark:text-blue-400 font-semibold">8.6 (latest)</span>
+                      <span className="ml-2 text-sm text-blue-500 dark:text-blue-400 font-semibold">8.5</span>
                     </div>
                   </div>
                 </motion.div>
@@ -150,19 +148,33 @@ export default function About() {
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 mt-2 mr-3 flex-shrink-0"></div>
                       <p className="text-sm text-slate-700 dark:text-slate-300">
-                         🏆 BitBox 5.0 Winner – SahYatri (real-time transport analytics)
+                         &#x1F3C6; Active competitive programmer on LeetCode, Codeforces, and CodeChef
                       </p>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 mt-2 mr-3 flex-shrink-0"></div>
                       <p className="text-sm text-slate-700 dark:text-slate-300">
-                        📱 Flutter timetable app for class tracking via API
+                        &#x1F4F1; Full-stack developer with MERN/Next.js expertise
                       </p>
                     </li>
                     <li className="flex items-start">
                       <div className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 mt-2 mr-3 flex-shrink-0"></div>
                       <p className="text-sm text-slate-700 dark:text-slate-300">
-                        🧠 Active in CP, AI/ML, and hackathons
+                        &#x1F9E0; Exploring AI/ML with TensorFlow and OpenAI integrations
+                      </p>
+                    </li>
+                    <li className="flex items-start">
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 mt-2 mr-3 flex-shrink-0"></div>
+                      <p className="text-sm text-slate-700 dark:text-slate-300">
+                        &#x1F9A5; Innovate3.0 National Hackathon Finalist - 
+                        <a 
+                          href="https://github.com/goyalkartik773/Innovate3.O-Final-" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-red-500 dark:text-red-400 hover:text-red-600 dark:hover:text-red-300 underline ml-1"
+                        >
+                          Palm-Swift-Sentinel
+                        </a>
                       </p>
                     </li>
                   </ul>
@@ -184,13 +196,13 @@ export default function About() {
                       Data Structures & Algorithms (C++)
                     </span>
                     <span className="px-3 py-1 bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300 rounded-full text-xs font-medium backdrop-blur-sm">
-                      Full Stack Development
+                      Full Stack Development (MERN/Next.js)
                     </span>
                     <span className="px-3 py-1 bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300 rounded-full text-xs font-medium backdrop-blur-sm">
-                      AI/ML Systems
+                      Competitive Programming
                     </span>
                     <span className="px-3 py-1 bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-300 rounded-full text-xs font-medium backdrop-blur-sm">
-                      Mobile App Engineering (Flutter)
+                      AI/ML Development
                     </span>
                   </div>
                 </motion.div>
