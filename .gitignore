@@ -80,7 +80,8 @@ next-env.d.ts
 
 # Gatsby files
 .cache/
-public
+# public folder - we need images and cv.pdf
+# public
 
 # Storybook build outputs
 .out
