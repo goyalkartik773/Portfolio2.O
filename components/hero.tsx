@@ -7,7 +7,7 @@ import { SiLeetcode, SiCodeforces, SiCodechef } from "react-icons/si";
 
 const socialLinks = [
   { href: "https://www.linkedin.com/in/kartik-goel-a95b2630b/", icon: Linkedin, label: "LinkedIn" },
-  { href: "https://github.com/goyalkartik773", icon: Github, label: "GitHub" },
+  { href: "https://github.com/", icon: Github, label: "GitHub" },
   { href: "https://leetcode.com/u//", icon: SiLeetcode, label: "LeetCode" },
   { href: "https://codeforces.com/profile/", icon: SiCodeforces, label: "Codeforces" },
   { href: "https://www.codechef.com/users/", icon: SiCodechef, label: "CodeChef" },
