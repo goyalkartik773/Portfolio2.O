@@ -15,7 +15,7 @@ const skillIcons: Record<string, string> = {
   "HTML5": "https://skillicons.dev/icons?i=html",
   "CSS3": "https://skillicons.dev/icons?i=css",
   "SQL": "https://skillicons.dev/icons?i=postgresql",
-  
+
   // Machine Learning
   "TensorFlow": "https://skillicons.dev/icons?i=tensorflow",
   "Scikit-learn": "https://skillicons.dev/icons?i=sklearn",
@@ -25,21 +25,21 @@ const skillIcons: Record<string, string> = {
   "Neural Networks": "https://skillicons.dev/icons?i=pytorch",
   "Matplotlib": "https://skillicons.dev/icons?i=matplotlib",
   "Jupyter": "https://skillicons.dev/icons?i=jupyter",
-  
+
   // Generative AI
   "OpenAI API": "https://skillicons.dev/icons?i=openai",
   "Gemini API": "https://skillicons.dev/icons?i=google",
   "NLP": "https://skillicons.dev/icons?i=python",
   "LLM Integration": "https://skillicons.dev/icons?i=python",
   "Prompt Engineering": "https://skillicons.dev/icons?i=chatgpt",
-  
+
   // Frontend Development
   "React.js": "https://skillicons.dev/icons?i=react",
   "Next.js": "https://skillicons.dev/icons?i=nextjs",
   "Redux Toolkit": "https://skillicons.dev/icons?i=redux",
   "TailwindCSS": "https://skillicons.dev/icons?i=tailwind",
   "Responsive Design": "https://skillicons.dev/icons?i=bootstrap",
-  
+
   // Backend Development
   "Node.js": "https://skillicons.dev/icons?i=nodejs",
   "Express.js": "https://skillicons.dev/icons?i=express",
@@ -50,7 +50,7 @@ const skillIcons: Record<string, string> = {
   "JWT Authentication": "https://skillicons.dev/icons?i=jwt",
   "REST API": "https://skillicons.dev/icons?i=api",
   "GraphQL": "https://skillicons.dev/icons?i=graphql",
-  
+
   // Databases & Tools
   "MongoDB": "https://skillicons.dev/icons?i=mongodb",
   "MySQL": "https://skillicons.dev/icons?i=mysql",
@@ -58,7 +58,7 @@ const skillIcons: Record<string, string> = {
   "Firebase": "https://skillicons.dev/icons?i=firebase",
   "MongoDB Atlas": "https://skillicons.dev/icons?i=mongodb",
   "Database Design": "https://skillicons.dev/icons?i=prisma",
-  
+
   // DevOps & Tools
   "Git": "https://skillicons.dev/icons?i=git",
   "GitHub": "https://skillicons.dev/icons?i=github",
@@ -255,7 +255,7 @@ export default function Skills() {
                         .replace("to-", "")
                         .split(" ")
                         .filter(c => c.trim())
-                      
+
                       const colorMap: Record<string, string> = {
                         "cyan-400": "#22d3ee",
                         "blue-500": "#3b82f6",
@@ -269,7 +269,7 @@ export default function Skills() {
                         "rose-400": "#fb7185",
                         "pink-500": "#ec4899",
                       }
-                      
+
                       const mappedColors = colors.map(c => colorMap[c] || c)
                       const gradient = `linear-gradient(135deg, ${mappedColors.join(", ")})`
                       el.style.background = gradient
@@ -282,8 +282,8 @@ export default function Skills() {
                     }}
                   >
                     <div className="flex items-center gap-2">
-                      <img 
-                        src={skillIcons[skill] || "https://skillicons.dev/icons?i=python"} 
+                      <img
+                        src={skillIcons[skill] || "https://skillicons.dev/icons?i=python"}
                         alt={skill}
                         className="w-5 h-5"
                         onError={(e) => {
