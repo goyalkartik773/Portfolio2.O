@@ -6,7 +6,7 @@ import { Typewriter } from "react-simple-typewriter";
 import { SiLeetcode, SiCodeforces, SiCodechef } from "react-icons/si";
 
 const socialLinks = [
-  { href: "https://www.linkedin.com/incd/", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://www.linkedin.com/", icon: Linkedin, label: "LinkedIn" },
   { href: "https://github.com/", icon: Github, label: "GitHub" },
   { href: "https://leetcode.com/u//", icon: SiLeetcode, label: "LeetCode" },
   { href: "https://codeforces.com/profile/", icon: SiCodeforces, label: "Codeforces" },
